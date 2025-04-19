@@ -1,0 +1,94 @@
+<html>
+<title>IRCTC Next Generation eTicketing System</title>
+<head>
+<style>
+    body{
+        margin:0px;
+    }
+    #a{
+        width:100%;
+        height:150px;
+        /* border:1px solid black; */
+
+    }
+    #left{
+        width:100px;
+        height:100px;
+        /* border:1px solid black; */
+        float:right;
+        margin:20px;
+        background-image: url("{{url_for('static', filename='images/logo.png')}}");
+        background-repeat: no-repeat;
+        
+    }
+    #middle{
+        width:80%;
+        height:100px;
+        /* border:1px solid black; */
+        margin:20px;
+        float: right;
+        background-color: navy;
+    }
+    #right{
+        width:100px;
+        height:100px;
+        /* border:1px solid black; */
+        margin:20px;
+        background-image: url("{{url_for('static', filename='images/secondry-logo.png')}}");
+        background-repeat: no-repeat;
+        
+    }
+    #main{
+        width:100%;
+        height:600px;
+        border:1px solid black;
+        background-image: url("{{url_for('static', filename='images/train.jpg')}}");
+        background-repeat: no-repeat;
+        background-size: 100% 600px;
+    }
+    #reg_form{
+        width:40%;
+        height:500px;
+        border:1px solid aliceblue;
+        margin:50px;
+        background-color: aliceblue;
+        border-radius:20px;
+    }
+</style>
+
+</head>
+<body>
+    <div id="a">
+        <div id="left"></div>
+
+        <div id="middle">
+            <center>
+            <h2 style="color:aliceblue;">IRCTC APPLICATION</h2>
+        </center>
+        </div>
+        <div id="right"></div>
+    </div>
+    <div id="main">
+        <div id="reg_form">
+            <center><h2>REGISTRATION FORM</h2>
+            <HR> 
+                <font color="red">{{msg}}</font>
+                <form action="/Registeraction" method="post">
+            <table>
+               
+                <tr><td><input type='text' name='fname' required style="width:400px;height:40px;border-radius:10px;" placeholder="ENTER NAME"></td></tr>
+                <tr><td><input type='email' name='email' required style="width:400px;height:40px;border-radius:10px;" placeholder="ENTER EMAIL"></td></tr>
+                <!-- <tr><td><input type='number' name='mobile' required style="width:400px;height:40px;border-radius:10px;" placeholder="ENTER MOBILE"></td></tr> -->
+                <tr><td><input type='text' name='uname' required style="width:400px;height:40px;border-radius:10px;" placeholder="ENTER USERNAME"></td></tr>
+                <tr><td><input type='password' name='pwd' required style="width:400px;height:40px;border-radius:10px;" placeholder="ENTER PASSWORD"></td></tr>
+                <tr><td><input type='submit' value='REGISTER' required style="width:400px;height:40px;border-radius:10px;background-color: navy;color:white;"></td></tr>
+            </table>
+            Already have an account ? <a href="Login.html">Login</a>
+        </form>
+        </center>
+        </div>
+    </div>
+
+</body>
+
+</html>
