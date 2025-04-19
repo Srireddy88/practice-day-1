@@ -1,6 +1,7 @@
-FROM python:3.7
+FROM python:3.7-slim
 WORKDIR /app
-RUN pip install requirements.txt
-COPY . . 
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
 EXPOSE 5000
 CMD["python","app.py"]
